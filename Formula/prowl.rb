@@ -7,6 +7,7 @@ class Prowl < Formula
   homepage "https://github.com/figarocorso/prowl"
   version "0.3.0"
   license "Apache-2.0"
+  depends_on "gh"
 
   on_macos do
     if Hardware::CPU.intel?
