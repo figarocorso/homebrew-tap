@@ -5,23 +5,23 @@
 class Jirawk < Formula
   desc "🦅 Keep watch over your in-progress and recently-closed Jira issues from the terminal."
   homepage "https://github.com/figarocorso/jirawk"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
-  depends_on "ankitpokhrel/jira-cli/jira-cli"
+  depends_on "jira-cli"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.0/jirawk_0.1.0_darwin_amd64.tar.gz"
-      sha256 "0dcfc8ba518a185f07c41576449badc8b3fd5cebbafc9963fb313a44853b35a3"
+      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.1/jirawk_0.1.1_darwin_amd64.tar.gz"
+      sha256 "616d3c6454f6585d14dee36c13059599bb77a3e5f187ef923e62f9b844f1d7c2"
 
       define_method(:install) do
         bin.install "jirawk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.0/jirawk_0.1.0_darwin_arm64.tar.gz"
-      sha256 "97d2750e62dec3bc987cbacadafcfc8adb5d79bdf554108dfbb0a020d72ea925"
+      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.1/jirawk_0.1.1_darwin_arm64.tar.gz"
+      sha256 "908717dffed7856a92ab40b427e6ce964de7b5d27248a85ec807e0e3303cd3a9"
 
       define_method(:install) do
         bin.install "jirawk"
@@ -31,15 +31,15 @@ class Jirawk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.0/jirawk_0.1.0_linux_amd64.tar.gz"
-      sha256 "809c8334df0ac99e1acfe8de6993306ceb544faa810386acf9653b6249b27a69"
+      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.1/jirawk_0.1.1_linux_amd64.tar.gz"
+      sha256 "a226a022f427cc15f87131dab12d31b97b7c73769ce2f2464e347f7083e1fc34"
       define_method(:install) do
         bin.install "jirawk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.0/jirawk_0.1.0_linux_arm64.tar.gz"
-      sha256 "718a2ae766dd6fcb4d4ecac2ba1187d7a01aa182598f38fdbee6ee5c88b641f2"
+      url "https://github.com/figarocorso/jirawk/releases/download/v0.1.1/jirawk_0.1.1_linux_arm64.tar.gz"
+      sha256 "b03df32330d867a6896fe28631ef3745356930bb113f116093b3b0d8323c7f70"
       define_method(:install) do
         bin.install "jirawk"
       end
