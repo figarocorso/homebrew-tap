@@ -5,23 +5,23 @@
 class Prowl < Formula
   desc "🦉 Keep watch over your GitHub Pull Requests from the terminal."
   homepage "https://github.com/figarocorso/prowl"
-  version "0.7.2"
+  version "0.7.3"
   license "Apache-2.0"
 
   depends_on "gh"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/figarocorso/prowl/releases/download/v0.7.2/prowl_0.7.2_darwin_amd64.tar.gz"
-      sha256 "c25f38d1c8709c90edcc6e85854a071c049f3e9b3c366da00d8c6c83df13285a"
+      url "https://github.com/figarocorso/prowl/releases/download/v0.7.3/prowl_0.7.3_darwin_amd64.tar.gz"
+      sha256 "ef5ed4941c04f2db985772fd62e530f0608339ba835ff25bf1a439e22c1d76c9"
 
       define_method(:install) do
         bin.install "prowl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/figarocorso/prowl/releases/download/v0.7.2/prowl_0.7.2_darwin_arm64.tar.gz"
-      sha256 "311c816cd7ae771d7a9c1609dc3b9e46da428fd77d58178739090c299d50b4f0"
+      url "https://github.com/figarocorso/prowl/releases/download/v0.7.3/prowl_0.7.3_darwin_arm64.tar.gz"
+      sha256 "b17e7c8be68db5aa430401c66ffc51e1d3ab349cb8f75155c55f159a0b9887fc"
 
       define_method(:install) do
         bin.install "prowl"
@@ -31,15 +31,15 @@ class Prowl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/figarocorso/prowl/releases/download/v0.7.2/prowl_0.7.2_linux_amd64.tar.gz"
-      sha256 "d131fa432be2cffc31542585c358c67bf725f5ea4f0a628530da99902130960d"
+      url "https://github.com/figarocorso/prowl/releases/download/v0.7.3/prowl_0.7.3_linux_amd64.tar.gz"
+      sha256 "c5b6dab65ac9434c81b3ab4d24e20e345d08e5b8eb35df8f70b9442bdfd212e2"
       define_method(:install) do
         bin.install "prowl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/figarocorso/prowl/releases/download/v0.7.2/prowl_0.7.2_linux_arm64.tar.gz"
-      sha256 "6cdbed43134a02a2eea27c7c36343dda65b7442f808736bcfc3c6dc2be34a711"
+      url "https://github.com/figarocorso/prowl/releases/download/v0.7.3/prowl_0.7.3_linux_arm64.tar.gz"
+      sha256 "c058572b25b8cc887eb738dc7f7eeca75336ed659a420ce5d51074bc4d6803da"
       define_method(:install) do
         bin.install "prowl"
       end
